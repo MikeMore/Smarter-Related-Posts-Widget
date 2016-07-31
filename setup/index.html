@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+<title>Related Posts Widget for Google Blogger v2.0 - Setup</title>
+<link href="demo.css" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="jquery.metadata.js"></script>
+<script type="text/javascript" src="jquery.validate.min.js"></script>
+
+<script type="text/javascript" src="../js/jquery.related-posts-widget-2.0.min.js"></script>
+<script type="text/javascript" src="setup-v1.0.min.js"></script>
+</head>
+<body>
+
+<h1 id="heading">Related Posts Widget for Google Blogger v2.0 - Setup</h1>
+<h3 id='demos'>
+	<a href="#demo1">Demo 1</a>
+	<a href="#demo2">Demo 2</a>
+	<a href="#demo3">Demo 3</a>
+	<a href="#demo4">Demo 4</a>
+</h3>
+<div>Customize widget options, and this wizard will demonstrate and generate the code for you.<br/>
+Click "Add to Blogger" to get redirected to Google Blogger and have code placed in a HTML/JS page element.
+</div>
+<div class="clear"></div>
+
+
+<div id="setup_set" class="set">
+<form id="setup_form" action="" method="get">
+	<h3>Options</h3>
+	<div class="clear"></div>
+	
+	<div class='info'>Leave inputs empty to use defaults. more info on <a href="https://github.com/MikeMore/Smarter-Related-Posts-Widget/wiki/Options">widget options</a></div>
+	
+	<ul id="setup">
+		<li>
+			<label>Blog URL</label>
+			<span><input type="text" id="blog_url" name="blog_url" value="" class="url"/></span>
+			<i>A Google Blogger Blog URL without the trailing slash. Or leave empty to aggregate yours.</i>
+		</li>
+		
+		<li>
+			<label>Mode</label>
+			<span>
+				<select id="tags1" name="tags1">
+					<option value="false">Related Posts Widget (default)</option>
+					<option value="[]">Recent Posts Widget</option>
+					<option value="fixed">Related Posts by Fixed Tags</option>
+				</select>
+			</span>
+			<i>Related posts widget or Recent posts widget</i>
+		</li>
+
+		<li class="tags1">
+			<label>Fixed Tags?</label>
+			<span><input type="text" id="tags" name="tags" value="" /></span>
+			<i>Fixed list to aggregate like ['jQuery','twitter'] - but note that tags are case-sensitive!</i>
+		</li>
+
+		<li>
+			<label>Max Posts</label>
+			<span><input type="text" id="max_posts" name="max_posts" value="5" class="{validate:{range:[1,1000]}}"/></span>
+			<i>Max posts to appear. For recent posts widget this option specify number of posts to return. default is 5.</i>
+		</li>
+
+		<li>
+			<label>Max Tags</label>
+			<span><input type="text" id="max_tags" name="max_tags" value="5" class="{validate:{range:[1,100]}}"/></span>
+			<i>Max tags to look for on the post page. default is 5.</i>
+		</li>
+
+		<li>
+			<label>Posts Per Tag</label>
+			<span><input type="text" id="posts_per_tag" name="posts_per_tag" value="5" class="{validate:{range:[1,100]}}"/></span>
+			<i>Max. posts to be query per tag -this option has no effect on recent posts widget. default is 5.</i>
+		</li>
+
+		<li>
+			<label>Show Titles?</label>
+			<span>
+				<select id="titles" name="titles">
+					<option value="1">yes (default)</option>
+					<option value="0">no</option>
+				</select>
+			</span>
+			<i>Show posts titles or not.</i>
+		</li>
+		
+		<li>
+			<label>Show Thumbs?</label>
+			<span>
+				<select id="thumbs" name="thumbs">
+					<option value="1">yes (default)</option>
+					<option value="0">no</option>
+				</select>
+			</span>
+			<i>Show posts thumbnails or not.</i>
+		</li>
+
+		<li>
+			<label>Default Thumb URL</label>
+			<span><input type="text" id="thumb_default" name="thumb_default" value="" class="{validate:{url:1}}"/></span>
+			<i>Default image URL to use as thumbnail for posts that don't have one.</i>
+		</li>
+
+		<li>
+			<label>Thumb Size</label>
+			<span><input type="text" id="thumb_size" name="thumb_size" value="s72-c" class=""/></span>
+			<i>To retrieve a 72 pixel image that is cropped, you would specify <b>'s72-c'</b> -which is the default, 
+				while to retrieve the uncropped image, you would specify <b>'s72'</b>.<br/>
+				Other accepted cropped and uncropped sizes are:<br/> 32, 48, 64, 72, 104, 144, 150, 160.<br/>
+				uncropped sizes only: <br/>94, 110, 128, 200, 220, 288, 320, 400, 512, 576, 640, 720, 800, 912, 1024, 1152, 1280, 1440, 1600.</i>
+		</li>
+
+		<li>
+			<label>Use CSS Style?</label>
+			<span>
+				<select id="demo_css" name="demo_css">
+					<option value="">none (default)</option>
+					<option value="../css/style1.css">style 1</option>
+					<option value="../css/style2.css">style 2</option>
+				</select>
+			</span>
+			<i>Use one these CSS styles to get started quickly</i>
+		</li>
+		
+		<li>
+			<label>Posts Per Transition</label>
+			<span><input type="text" id="show_n" name="show_n" value="0" class="{validate:{range:[0,1000]}}"/></span>
+			<i>Number of links/images to show per transition. apparently should be less than max_posts. 
+				If you set this number to 0 then transitions will be disabled and links are displayed as a simple list.</i>
+		</li>
+		
+	
+		
+		<li>
+			<label>Stay Time</label>
+			<span><input type="text" id="stay_time" name="stay_time" value="5000" class="{validate:{range:[0,100000]}}"/></span>
+			<i>Time in milliseconds for a link to be shown.</i>
+		</li>
+
+		<li>
+			<label>Enter Time</label>
+			<span><input type="text" id="enter_time" name="enter_time" value="200" class="{validate:{range:[0,100000]}}"/></span>
+			<i>Entry transition time in milliseconds. </i>
+		</li>
+
+		<li>
+			<label>Exit Time</label>
+			<span><input type="text" id="exit_time" name="exit_time" value="200" class="{validate:{range:[0,100000]}}"/></span>
+			<i>Exit transition time in milliseconds. </i>
+		</li>
+
+		<li>
+			<label>Animate what?</label>
+			<span>
+				<select id="animate" name="animate">
+					<option value="opacity">opacity (default)</option>
+					<option value="height">height</option>
+					<option value="width">width</option>
+					<option value="fontSize">font size</option>
+					<option value="lineHeight">line height</option>
+				</select>
+			</span>
+			<i>What to animate for entry transition. by default is set to 'opacity' to fade link/thumb in.</i>
+		</li>
+		
+		<li>
+			<label>Loop Animation?</label>
+			<span>
+				<select id="animate_loop" name="animate_loop">
+					<option value="1">yes (default)</option>
+					<option value="0">no</option>
+				</select>
+			</span>
+			<i>Show posts thumbnails or not.</i>
+		</li>
+
+		<li>
+			<label>Loading Class</label>
+			<span><input type="text" id="loading_class" name="loading_class" value="rpw-loading" /></span>
+			<i>CSS class will be set on list until widget is loaded. default is 'rpw-loading'</i>
+		</li>
+
+		<li>
+			<label>Related Title</label>
+			<span><input type="text" id="related_title" name="related_title" value="Related Posts" /></span>
+			<i>h3 Title to be added for related posts widget.</i>
+		</li>
+
+		<li>
+			<label>Recent Title</label>
+			<span><input type="text" id="recent_title" name="recent_title" value="Recent Posts" /></span>
+			<i>h3 Title to be added for recent posts widget.</i>
+		</li>
+
+		<li>
+			<label>Timeout</label>
+			<span><input type="text" id="timeout" name="timeout" value="1500" class="{validate:{range:[1,100000]}}"/></span>
+			<i>Timeout per request in milliseconds to display widget even if one of the feeds request didn't complete.
+			<br/>Default is 1500</i>
+		</li>
+
+
+		<li>
+			<label>Post Score Class</label>
+			<span><input type="text" id="post_score_class" name="post_score_class" value="" class=""/></span>
+			<i>A CSS class prefix to be used to style posts based on relevancy. <br/>
+				If you set this to 'related-link' and max_tags is 5 then related links can have classes 
+				like ('related-link1' to 'related-link5')</i>
+		</li>
+		
+		<li>
+			<label>Post Pages Only? </label>
+			<span>
+				<select id="post_page_only" name="post_page_only">
+					<option value="0">No (default)</option>
+					<option value="1">Yes</option>
+				</select>
+			</span>
+			<i>You can abort widget if current page is not a post page by setting this to 1 which is useful if you don't want widget to appear on stand-alone pages. by default this option is disabled.</i>
+		</li>
+		
+		<li>
+			<label>Keep Query String? </label>
+			<span>
+				<select id="url_querystring" name="url_querystring">
+					<option value="0">No (default)</option>
+					<option value="1">Yes</option>
+				</select>
+			</span>
+			<i>Any query string in the container page URL will be ignored, which is suitable to Google Blogger platform.</i>
+		</li>
+		
+		<li>
+			<label>Widget Loading </label>
+			<span>
+				<select id="widget_load" name="widget_load">
+					<option value="">Auto - Options in HTML comment</option>
+					<option value="html5">Auto - Options in HTML5 attribute</option>
+					<option value="jquery">jQuery method call</option>
+				</select>
+			</span>
+			<i>
+			Auto-load any number of div elements with "related-posts-widget" class and place options in a HTML comment or HTML5 data attribute. 
+			Also, you can use a jQuery method call.
+			</i>
+		</li>
+	</ul>
+	
+	<div class="buttons">
+		<input type="reset" value="Reset" class="reset" />
+		<input type="submit" value="Update Demo &amp; Code" class="submit" />
+	</div>
+	
+</form>	
+</div>
+
+
+
+<div id="demo_set" class="set">
+	<h3>Demo</h3>
+	<div class="clear"></div>
+	<div class='info'>* for demo only, 'www.moretechtips.net' will be used if 'blog url' was empty</div>
+	<div id="demo"></div>
+	
+	<div class="info">
+	Sample tags:
+		<a rel="tag" href="http://www.moretechtips.net/search/label/javascript">javascript</a> 
+		, <a rel="tag" href="http://www.moretechtips.net/search/label/jQuery">jQuery</a> 
+		, <a rel="tag" href="http://www.moretechtips.net/search/label/Web%202.0">Web 2.0</a> 
+		, <a rel="tag" href="http://www.moretechtips.net/search/label/AJAX">AJAX</a>
+		, <a rel="tag" href="http://www.moretechtips.net/search/label/Blogger%2FBlogspot">Blogger/Blogspot</a>
+	</div>
+</div>
+
+<div class="clear"></div>
+
+<div id="code_set" class="set">
+	
+	
+	<form method="post" action="http://www.blogger.com/add-widget" style="display:inline">
+		<div class="inline"><input type="submit" value="Add To Blogger" class="blogger-add" /></div>
+		
+		<h3>Code </h3>
+		<div class="info">Copy and paste into a HTML/JavaScript Gadget under Page Elements. 
+		Or click "Add to blogger" to get code copied to your blog.</div>
+		<div class="clear"></div>
+		
+		
+		<div>
+			<textarea id="code" name="widget.content" rows="5" cols="80" readonly="readonly"></textarea>
+		
+			<input type="hidden" name="widget.title" value=""/>
+			<input type="hidden" name="infoUrl" value="http://blogger-related-posts.googlecode.com/"/>
+			<input type="hidden" name="widget.template" value="&lt;data:content/&gt;" />
+		</div>
+	</form>
+
+</div>
+
+<div id="note_set" class="set">
+	<h3>Notes </h3>
+	
+<ul>
+<li>Javascript files -jQuery library & Widget- should be included in that order. Each file only needs to exists one time on a page regardless of how many widgets you have on that page. </li>
+<li>You can include the Javascript files at &lt;head&gt; section or by the end of the page.</li>
+<li>When setting options in HTML5 attribute, you should escape single-quotes with backslash in options values.<br/> 
+so, you would write <span class="code">'John\'s Post'</span> instead of <span class="code">'John's Post'</span>. <br/>
+And escape double-quotes like this <span class="code">'say &quot;hi&quot;'</span> instead of <span class="code">'say "hi"'</span>.</li>
+<li>If you place options in HTML comment, you should escape single-quotes as before. 
+And put a backslash between any 2 consecutive dashes like this <span class="code">'related -\- Post'</span>
+ instead of <span class="code">'related -- Post'</span>.</li>
+<li>Also, If you place options in HTML comment and <b>embed code in Blogger template</b>, 
+you need to escape the HTML comment like this:<br/>
+<pre>
+<b>&amp;lt;!--</b> {
+  max_posts:4
+  ,max_tags:4
+  ,...
+} <b>--&amp;gt;</b>
+</pre>
+</li>
+<li>Plugin was also tested to work with jQuery 1.3.2, Just replace jQuery Javascript source to "https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"</li>
+</ul>
+
+</div>
+
+
+
+
+
+
+
+<div id="footer">
+	<div class='ad'>
+		
+	</div>
+
+	
+	<a class="more-icon" href="http://www.moretechtips.net/" title="More Tech Tips!"></a>
+	
+	<a class="link" href="http://www.moretechtips.net/2010/09/smarter-related-posts-widget-for-google.html">Back to post</a>
+	
+	<div class='social-footer'>
+		<a class="twitter-button-60 share-button-60" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.moretechtips.net%2F2010%2F09%2Fsmarter-related-posts-widget-for-google.html&amp;via=mike_more&amp;text=Smarter%20Related%20Posts%20Widget%20for%20Google%20Blogger%20-%20v2.0" target="_blank"></a>
+		
+		<a class="share-button-60" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.moretechtips.net%2F2010%2F09%2Fsmarter-related-posts-widget-for-google.html" target="_blank"></a>
+	</div>
+</div>
+
+</body>
+</html>

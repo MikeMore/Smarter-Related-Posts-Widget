@@ -1,0 +1,286 @@
+body{
+	font-family:arial;
+	font-size:12px;
+	padding-bottom:60px;
+	color:silver;
+	background:#242526;
+}
+
+H1{
+	color:white;
+	font-size:150%;
+	margin:7px 0 7px 0;
+}
+#footer{
+	bottom:0;
+	height:68px;
+	left:0;
+	position:fixed;
+	text-align:center;
+	width:100%;
+	z-index:100;
+	border-top:#333 1px solid;
+	background:#2F3032;
+}
+#footer .ad{
+	width:468px;
+	height:60px;
+	overflow:hidden;
+	float:right;
+	margin:4px 5px;
+}
+
+#footer a.more-icon{
+	background:url(icon.png) no-repeat;
+	display:block;
+	width:36px;
+	height:36px;
+	margin:10px 0 0 5px;
+	float:left;
+}
+#footer a.more-icon:hover{
+	background-position:0 -36px;
+}
+
+#footer a.link{
+	display:block;
+	float:right;
+	padding:0 5px 0 20px;
+	margin:0 5px 0 0;
+	line-height:36px;
+	color:white;
+	font-weight:bold;
+	text-decoration:none;
+}
+#footer a.link:hover{
+	color:#E39B60;
+}
+
+#footer .social-footer{
+	height:22px;
+	overflow:hidden;
+	float:right;
+	margin:9px 20px 20px 0;
+}
+.social-footer div.bitly-wide
+,.social-footer div.delic-wide
+,.social-footer a.bitly-button
+,.social-footer a.delicious-button
+,.social-footer a.fb-like
+,.social-footer iframe{
+	display:block;
+	float:left;
+	color:silver;
+	margin-left:3px;
+}
+
+/*********************/
+#demos{
+	float:right;
+	margin:0 0 0 10px;
+}
+#demos a{
+	display:block;
+	float:left;
+	text-decoration:none;
+	color:silver;
+	background:#444;
+	border:#666 1px solid;
+	margin:0 0 0 4px;
+	padding:2px;
+}
+#demos a:hover{
+	background:#000;
+	border:#666 1px solid;
+	color:#fff;
+	text-decoration:none;
+}
+
+div.clear{
+	clear:both
+}
+div.inline{
+	display:inline
+}
+input, select, textarea{
+	font-family:arial;
+	font-size:12px;
+	border:#333 1px solid;
+}
+
+
+div.set {
+	border:#d0d0d0 1px solid;
+	position:relative;
+	padding:6px;
+	background:#f8f8f8;
+	
+}
+div.set h3{
+	margin:0 0 6px 0;
+	font-size:130%;
+	color:#004887;
+	
+}
+/***********************/
+#setup_set{
+	width:48%;
+	float:left;
+	height:255px;
+	margin:6px 0 0 0;
+}
+#setup{
+	height:175px;
+	overflow:auto;
+	padding:0;
+	list-style-type:none;
+	border:#e5e5e5 1px solid;
+	padding:4px 5px 4px 5px;
+	margin:4px 0 4px 0;
+	background:#fff
+}
+
+/***********************/
+#demo_set{
+	float:right;
+	height:255px;
+	margin:6px 0 0 0;
+	width:48%
+}
+#demo{
+	height:175px;
+	overflow:auto;
+	background:white;
+	border:#e5e5e5 1px solid;
+	padding:4px 5px 4px 5px;
+	margin:4px 0 4px 0;
+	color:black;
+}
+div.info{
+	margin:2px;
+	color:#666
+}
+div.info a{
+	text-decoration:none;
+	color:#872200
+}
+div.info a:hover{
+	color:black
+}
+/***********************/
+#code_set{
+	margin:8px 0 0 0;
+}
+
+#code_set .blogger-add{
+	border-width:0;
+	float:right;
+	display:block;
+	text-indent: -999px;
+	line-height: 0;
+	overflow:hidden;
+	color:transparent;
+	width:104px;
+	height:30px;
+	cursor:pointer;
+	background:transparent url(add2blogger.png) no-repeat 0 0;
+}
+#code_set .blogger-add:hover{
+	background-position:0 -30px;
+}
+/***********************/
+#note_set{
+	margin:8px 0 0 0;
+	color:#333;
+}
+
+/***********************/
+#setup_set .buttons {
+	margin:2px 0 0 2px;
+}
+#setup_set .buttons .reset{
+	border:#666 1px solid;
+	background:#e5e5e5;
+	font-weight:bold;
+	color:#666;
+	float:left
+}
+#setup_set .buttons .submit{
+	border:#666 1px solid;
+	background:#333;
+	color:#fff;
+	font-weight:bold;
+	float:right
+}	
+
+#setup_set li{
+	display:block;
+	margin:0 0 15px 0;
+	list-style-type:none;
+}
+#setup_set li label{
+	display:block;
+	width:150px;
+	color:#333;
+	font-weight:bold;
+	float:left;
+	line-height:25px;
+}
+#setup_set li span{
+	float:left;
+	display:block;
+}
+#setup_set li span input, #setup_set li span select{
+	width:200px;
+	clear:both
+}
+#setup_set li i{
+	clear:both;
+	display:block;
+	font-size:12px;
+	color:#666;
+	margin:10px 0 0 0;
+	font-style:normal
+}
+
+label.error {
+	color:red !important;
+	font-weight:lighter !important;
+	display:block;
+	clear:both;
+	width:auto  !important;
+	float:none !important
+}
+/***********************/
+
+#code {
+	width:100%;
+	font-family:'Courier New', Courier, monospace;
+}
+
+
+
+
+
+
+a.share-button-60 {
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    background: url(tw-fb-2.png);
+    height: 20px;
+    width: 60px;
+    overflow: hidden;
+    opacity: 0.8;
+    margin: 0 0 0 2px;
+}
+a.share-button-60:hover {
+	opacity: 1;
+}
+
+a.twitter-button-60 {
+    font-size: 0;
+    line-height: 0;
+    width: 58px;
+    background-position: -60px 0;
+}

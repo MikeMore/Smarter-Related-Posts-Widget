@@ -1,0 +1,33 @@
+/* 	Related Posts Widget for Google Blogger v2.0
+	Blog : http://www.moretechtips.net
+	Copyright 2009 [Mike@moretechtips.net] 
+	Licensed under the Apache License, Version 2.0 
+	(the "License"); you may not use this file except in compliance with the License. 
+	You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+*/ 
+/** loading background gif **/
+ul.rpw-loading {
+	background:url(../img/load.gif) no-repeat right top;
+}
+ul.rpw {
+	list-style-type:none !important;
+	margin:0; 
+	padding:0;
+	/* you may set a fixed width & height to avoid flickering 
+	width:?px; 
+	height:78px;
+	*/
+}
+ul.rpw li{
+	float:left;
+	margin:0 0 4px 4px;
+	list-style-type:none !important;
+}
+ul.rpw a{
+	text-decoration:none;
+	outline:none;
+}
+/** image **/
+ul.rpw img{
+	border:silver 1px solid;
+}
