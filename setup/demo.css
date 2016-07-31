@@ -257,3 +257,30 @@ label.error {
 	width:100%;
 	font-family:'Courier New', Courier, monospace;
 }
+
+
+
+
+
+
+a.share-button-60 {
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    background: url(tw-fb-2.png);
+    height: 20px;
+    width: 60px;
+    overflow: hidden;
+    opacity: 0.8;
+    margin: 0 0 0 2px;
+}
+a.share-button-60:hover {
+	opacity: 1;
+}
+
+a.twitter-button-60 {
+    font-size: 0;
+    line-height: 0;
+    width: 58px;
+    background-position: -60px 0;
+}

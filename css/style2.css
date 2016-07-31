@@ -8,7 +8,7 @@
  
 /** loading background gif **/
 ul.rpw-loading {
-	background:url(load.gif) no-repeat right top;
+	background:url(../img/load.gif) no-repeat right top;
 }
 ul.rpw {
 	list-style-type:none !important;
